@@ -1,0 +1,45 @@
+# Strand .gitignore
+
+# Temporary files
+Development/.tmp/
+*.log
+.DS_Store
+
+# Go specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# Build artifacts
+/Development/bin/
+/Development/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+vendor/
+
+# Cache
+.beads/.cache/
+
+# Test coverage
+*.coverprofile
+coverage.html
+
+# Environment files
+.env
+.env.local
