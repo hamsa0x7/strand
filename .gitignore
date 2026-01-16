@@ -1,7 +1,7 @@
 # Strand .gitignore
 
 # Temporary files
-Development/.tmp/
+.tmp/
 *.log
 .DS_Store
 
@@ -16,8 +16,8 @@ Development/.tmp/
 go.work
 
 # Build artifacts
-/Development/bin/
-/Development/dist/
+/bin/
+/dist/
 
 # IDE
 .vscode/
@@ -33,7 +33,7 @@ Thumbs.db
 # Dependencies
 vendor/
 
-# Cache
+# Beads cache
 .beads/.cache/
 
 # Test coverage
@@ -43,3 +43,7 @@ coverage.html
 # Environment files
 .env
 .env.local
+
+# Local playbook files (not part of the product)
+PLAYBOOK_*.md
+STRAND_PID.md
