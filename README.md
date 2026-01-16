@@ -1,46 +1,122 @@
-# Strand - Task Tracking System
+# Strand - MVP Implementation
 
-**A git-backed, dependency-aware task tracking system with human-readable Markdown storage**
+A git-backed, dependency-aware task tracking system with human-readable Markdown storage.
 
-## Project Status
+## 🚧 Development Status
 
-🚀 **In Development** - Following Agentic AI Product Development Playbook (Beads Edition)
+**Phase 9.1: MVP Implementation - IN PROGRESS**
 
-## Overview
+- ✅ Core Markdown storage with YAML frontmatter
+- ✅ Basic CLI commands (init, create, list, show, update, ready)
+- ⏸️ SQLite cache layer (deferred to post-MVP)
+- ⏸️ File watcher (deferred to post-MVP)
 
-Strand combines the best of Beans (human-readable Markdown) and Beads (dependency-aware graph tracking) into a unified system optimized for both humans and AI agents.
+## 🏗️ Building
 
-## Key Features
+**Note:** Go 1.21+ is required but not yet installed on this system.
 
-- ✅ Human-readable Markdown files with YAML frontmatter
-- ✅ Dependency tracking and hierarchical structure
-- ✅ SQLite cache for fast queries
-- ✅ Beautiful TUI interface
-- ✅ Multi-agent safe with hash-based IDs
-- ✅ Memory decay and auto-archiving
+Once Go is installed, build with:
 
-## Documentation
+```bash
+go mod download
+go build -o bin/strand ./cmd/strand
+```
 
-All specification documents are in the `Development/Documents/` folder:
+## 🎯 Usage
 
-- **PID** (Product Ideation Document): `../STRAND_PID.md`
-- **PDR** (Product Design Review): Coming in Phase 2
-- **FSD** (Functional Specification): Coming in Phase 3
-- **DSD** (Design Specification): Coming in Phase 4
-- **AB** (Architecture Blueprint): Coming in Phase 5
+```bash
+# Initialize a strand project
+./strand init
 
-## Development
+# Create a task
+./strand create "Implement user authentication"
 
-This project follows the Agentic AI Product Development Playbook. See `AGENTS.md` for AI governance rules during development.
+# List all tasks
+./strand list
 
-## Technology Stack
+# Show task details
+./strand show strand-20260116123456
 
-- **Language:** Go (single binary, cross-platform)
-- **Storage:** Markdown files + SQLite
-- **TUI:** Bubble Tea / Lip Gloss
-- **CLI:** Cobra
-- **File watching:** fsnotify
+# Update task status
+./strand update strand-20260116123456 --status in-progress
 
-## License
+# List ready tasks (no blockers)
+./strand ready
+```
+
+## 📁 Project Structure
+
+```
+.
+├── cmd/strand/          # CLI entry point
+├── internal/
+│   ├── core/            # Domain models (Task)
+│   ├── storage/         # Storage interface
+│   ├── markdown/        # Markdown file storage implementation
+│   └── cli/             # Cobra CLI commands
+└── go.mod               # Dependencies
+```
+
+## 🧪 Testing
+
+Once Go is installed:
+
+```bash
+go test ./...
+```
+
+## 📝 Task File Format
+
+Tasks are stored as Markdown files with YAML frontmatter:
+
+```markdown
+---
+id: strand-20260116123456
+type: task
+status: in-progress
+priority: high
+created: 2026-01-16T12:34:56Z
+updated: 2026-01-16T14:22:10Z
+tags: [backend, auth]
+---
+
+# Implement user authentication
+
+## Description
+
+Build JWT-based authentication system with refresh tokens.
+
+## Acceptance Criteria
+- [ ] Login endpoint
+- [ ] Token refresh logic
+- [ ] Middleware for protected routes
+```
+
+## 🌟 Features (MVP)
+
+- ✅ Markdown-first storage (human-readable)
+- ✅ YAML frontmatter for metadata
+- ✅ CLI with table and JSON output
+- ✅ Task statuses: backlog, ready, in-progress, done, blocked, cancelled
+- ✅ Priority levels: critical, high, medium, low
+- ✅ Dependency tracking (basic)
+- ✅ Ready task detection (no blockers)
+
+## 🚀 Next Steps (Post-MVP)
+
+- SQLite cache for performance
+- File watcher for auto-sync
+- Beautiful TUI (Bubble Tea)
+- Dependency graph visualization
+- GraphQL query interface
+- Auto-archiving completed tasks
+
+## 📚 Documentation
+
+See `Documents/` folder for:
+- `01_Platform_Tech_Stack.md` - Technology decisions
+- `02_Product_Design_Review.md` - Product vision and scope
+
+## 📄 License
 
 TBD
