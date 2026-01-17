@@ -52,3 +52,7 @@ var listCmd = &cobra.Command{
 		return nil
 	},
 }
+
+func init() {
+	listCmd.Flags().BoolVar(&outputJSON, "json", false, "Output as JSON")
+}

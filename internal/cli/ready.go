@@ -54,3 +54,7 @@ var readyCmd = &cobra.Command{
 		return nil
 	},
 }
+
+func init() {
+	readyCmd.Flags().BoolVar(&outputJSON, "json", false, "Output as JSON")
+}
