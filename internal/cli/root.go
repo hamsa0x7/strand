@@ -60,6 +60,7 @@ func init() {
 	rootCmd.AddCommand(editCmd)
 	rootCmd.AddCommand(searchCmd)
 	rootCmd.AddCommand(graphCmd)
+	rootCmd.AddCommand(tuiCmd)
 }
 
 // findStrandDir searches for .strand directory in current or parent directories
