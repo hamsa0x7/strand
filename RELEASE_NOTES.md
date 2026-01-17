@@ -176,7 +176,7 @@ Build JWT-based auth with refresh tokens.
 - **Git-backed** - automatic history
 - **Local-first** - work offline
 
-### Playbook-Driven Teams
+### Development Teams
 - **Structured task tracking** - follows best practices
 - **Dependency awareness** - never miss prerequisites
 - **Visual feedback** - graphs and TUI
