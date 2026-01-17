@@ -226,8 +226,6 @@ See the `/Documents` folder for:
 
 ## 🙏 Credits
 
-Built following the **Agentic AI Product Development Playbook (Beads Edition)**.
-
 **Timeline:**
 - Phase 0-2: Planning & Design (Jan 15-16, 2026)
 - Phase 9.1: MVP Implementation (Jan 16, 2026)

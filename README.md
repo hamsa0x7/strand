@@ -258,8 +258,6 @@ Task description in Markdown...
 
 ## Contributing
 
-Strand is built with the **Agentic AI Product Development Playbook**.
-
 **Want to contribute?**
 1. Fork the repo
 2. Create a feature branch
@@ -271,8 +269,7 @@ Strand is built with the **Agentic AI Product Development Playbook**.
 ## Credits
 
 **Built by:** AI + Human collaboration  
-**Timeline:** Jan 15-17, 2026 (3 days)  
-**Playbook:** Agentic AI Product Development (Beads Edition)
+**Timeline:** Jan 15-17, 2026 (3 days)
 
 **Technology Stack:**
 - Go 1.21+
