@@ -246,6 +246,7 @@ TBD - Choose your license!
 Strand v1.1 is **feature-complete** and **production-ready**.
 
 **Future possibilities:**
+- **Cross-project task management** - Global views, project field, multi-project search
 - TUI enhancements (task editing in UI)
 - SQLite cache auto-sync
 - File watcher for real-time updates

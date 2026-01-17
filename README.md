@@ -249,6 +249,11 @@ Task description in Markdown...
 - SQLite cache foundation
 
 ### 🔮 Future
+- Cross-project task management
+  - Global task view across multiple projects
+  - Project field in task metadata
+  - `strand list --all-projects` command
+  - Multi-project search and filtering
 - Real-time file watching
 - Enhanced TUI features
 - Multi-agent coordination
