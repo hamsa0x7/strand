@@ -269,13 +269,6 @@ Task description in Markdown...
 3. Follow `AGENTS.md` governance
 4. Submit a PR
 
----
-
-## Credits
-
-**Built by:** AI + Human collaboration  
-**Timeline:** Jan 15-17, 2026 (3 days)
-
 **Technology Stack:**
 - Go 1.21+
 - Cobra (CLI)
