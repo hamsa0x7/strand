@@ -1,8 +1,7 @@
 # Strand Development - AI Agent Governance
 
 **Project:** Strand - Task Tracking System  
-**Generated:** 2026-01-15  
-**Playbook:** Agentic AI Product Development (Beads Edition)
+**Generated:** 2026-01-15
 
 ---
 
@@ -30,47 +29,47 @@ This file defines the governance rules for AI agents working on the Strand proje
 
 ## Task Tracking
 
-Use Beads (bd) for all task management during development:
+Use Strand for all task management during development:
 
 ### Query Tasks
 ```bash
-bd ready                       # Shows tasks ready to work on (no blockers)
-bd list --status in-progress  # Show active tasks
-bd show <id>                   # View task details
+strand ready                       # Shows tasks ready to work on (no blockers)
+strand list --status in-progress  # Show active tasks
+strand show <id>                   # View task details
 ```
 
 ### Create Tasks
 ```bash
-bd create "Task description" -p X  # Create task (priority 0-5)
-bd dep add <child> <parent>        # Add dependency
+strand create "Task description" --priority high  # Create task
+strand dep add <child> <parent>                   # Add dependency
 ```
 
 ### Update Tasks
 ```bash
-bd update <id> --status in-progress  # Start working
-bd update <id> --status done         # Mark complete
+strand update <id> --status in-progress  # Start working
+strand update <id> --status done         # Mark complete
 ```
 
 ### Example Workflow
 ```bash
 # Before starting work
-bd ready
+strand ready
 
-# Create epic for feature
-bd create "Feature: Dependency Graph" -p 1 --parent bd-mvp
+# Create tasks
+strand create "Feature: Dependency Graph" --priority high
+strand create "Implement graph validation" --priority medium
+strand create "Add cycle detection" --priority medium
 
-# Create sub-tasks
-bd create "Implement graph validation" -p 2 --parent bd-feature-deps
-bd create "Add cycle detection" -p 2 --parent bd-feature-deps
-bd dep add bd-cycle-detection bd-graph-validation
+# Add dependencies
+strand dep add <cycle-id> <validation-id>
 
 # Work on ready tasks
-bd update bd-graph-validation --status in-progress
+strand update <validation-id> --status in-progress
 # ... implement ...
-bd update bd-graph-validation --status done
+strand update <validation-id> --status done
 
 # Now cycle detection is unblocked
-bd ready  # Returns bd-cycle-detection
+strand ready  # Returns cycle detection task
 ```
 
 ---
@@ -266,7 +265,6 @@ Additional notes
 1. **Check PID first** - Does this align with Strand's philosophy?
 2. **Ask the user** - Don't assume, clarify!
 3. **Use MCP** - Validate with Context7 or anti-bs
-4. **Consult playbook** - Follow the governance rules
 
 ---
 
