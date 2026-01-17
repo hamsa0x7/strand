@@ -1,5 +1,9 @@
 # Strand
 
+<p align="center">
+  <img src="strand.png" alt="Strand Logo" width="400"/>
+</p>
+
 **A git-backed, dependency-aware task tracking system for humans and AI agents**
 
 [![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/hamsa0x7/strand/releases)

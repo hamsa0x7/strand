@@ -1,5 +1,9 @@
 # Strand v1.1 - Release Notes
 
+<p align="center">
+  <img src="strand.png" alt="Strand Logo" width="400"/>
+</p>
+
 **Release Date:** January 17, 2026  
 **Status:** Production Ready  
 **Download:** https://github.com/hamsa0x7/strand
