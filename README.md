@@ -1,7 +1,7 @@
 # Strand
 
 <p align="center">
-  <img src="strand.png" alt="Strand Logo" width="400"/>
+  <img src="strand.png" alt="Strand Logo" width="200"/>
 </p>
 
 **A git-backed, dependency-aware task tracking system for humans and AI agents**

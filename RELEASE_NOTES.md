@@ -1,7 +1,7 @@
 # Strand v1.1 - Release Notes
 
 <p align="center">
-  <img src="strand.png" alt="Strand Logo" width="400"/>
+  <img src="strand.png" alt="Strand Logo" width="200"/>
 </p>
 
 **Release Date:** January 17, 2026  
@@ -100,26 +100,24 @@ strand graph
 
 ## 📊 What's New in v1.1
 
-### From MVP (v1.0) to Full Product (v1.1)
-
-**Priority 1: Core Commands ✅**
+**Core Commands ✅**
 - Delete command with confirmation
 - Complete dependency management (add/remove/list)
 - Edit command with $EDITOR support
 
-**Priority 2: Enhanced Features ✅**
+**Enhanced Features ✅**
 - Full-text search with filters
 - Input validation for all enums
 - Helpful error messages
 
-**Priority 3: Advanced Features ✅**
+**Advanced Features ✅**
 - Dependency graph visualization (emoji + ASCII)
 - Interactive TUI with Bubble Tea
 - SQLite cache foundation
 
 ### Stats
 
-- **Commands:** 15 (up from 6 in MVP)
+- **Commands:** 15
 - **Lines of Code:** ~4,000+
 - **Features:** All planned features complete
 - **Production Ready:** ✅ YES
