@@ -22,6 +22,18 @@ var updateCmd = &cobra.Command{
 	RunE: func(cmd *cobra.Command, args []string) error {
 		id := args[0]
 
+		// Validate inputs
+		if updateStatus != "" {
+			if err := ValidateStatus(updateStatus); err != nil {
+				return err
+			}
+		}
+		if updatePriority != "" {
+			if err := ValidatePriority(updatePriority); err != nil {
+				return err
+			}
+		}
+
 		// Get existing task
 		task, err := store.Get(id)
 		if err != nil {

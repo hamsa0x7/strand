@@ -24,6 +24,16 @@ var createCmd = &cobra.Command{
 	RunE: func(cmd *cobra.Command, args []string) error {
 		title := args[0]
 
+		// Validate inputs
+		if err := ValidateType(createType); err != nil {
+			return err
+		}
+		if createPriority != "" {
+			if err := ValidatePriority(createPriority); err != nil {
+				return err
+			}
+		}
+
 		// Create task
 		taskType := core.TaskType(createType)
 		task := core.NewTask(title, taskType)
