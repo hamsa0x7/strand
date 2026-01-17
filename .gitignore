@@ -47,3 +47,9 @@ coverage.html
 # Local playbook files (not part of the product)
 PLAYBOOK_*.md
 STRAND_PID.md
+
+# Development and internal documentation (kept locally)
+Development/
+test-strand/
+pkg/
+
